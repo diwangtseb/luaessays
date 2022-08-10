@@ -11,6 +11,11 @@ print(age,type(age))
 -- boolean
 local sex = true;
 print(sex,type(sex))
+
+local a,b = true,false
+
+print(a and b, a or b, not(a and b))
+
 -- nil
 local coolman
 print(coolman,type(coolman))
