@@ -12,7 +12,7 @@ print(age,type(age))
 local sex = true;
 print(sex,type(sex))
 
-local a,b = true,false
+local a,b = true,true
 
 print(a and b, a or b, not(a and b))
 
