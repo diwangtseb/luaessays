@@ -35,6 +35,17 @@ print(result)
 local t = {name = "zhangsan",age = 20}
 print(t.name,t.age,type(t))
 
+-- metatable
+local mt = setmetatable({},{
+    __add = function (t1,t2)
+        return t1.age + t2.age
+    end
+})
+print("mt",mt,mt.age)
+
+local ttt = table.insert(t,mt)
+print("ttt",ttt,t.age)
+
 -- error handling
 local function testError()
     error("error")
