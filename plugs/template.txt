@@ -1,0 +1,12 @@
+package main	
+func(xm *XM) Show(){
+    panic("Not impl") 
+}
+
+
+type Displayer interface{    	    
+	Show()
+}	
+
+type XM struct{}
+
