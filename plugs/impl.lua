@@ -29,9 +29,13 @@ append(file_path,'func(xm *XM) Show(){\n    panic("Not impl") \n}',2)
 local temp_file_path = file_path..".tmp"
 local temp_file = io.open(temp_file_path,"w")
 for _, line in ipairs(t) do
-    temp_file:write(line.."\n")
+    if temp_file~= nil then
+        temp_file:write(line.."\n")
+    end
 end
-temp_file:close()
+if temp_file ~= nil then
+    temp_file:close()
+end
 
 
 os.remove(file_path)
